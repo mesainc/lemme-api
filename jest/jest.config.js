@@ -37,6 +37,7 @@ module.exports = {
     '!**/*repository.(t|j)s',
     '!**/*interface.(t|j)s',
     '!**/*datasource.(t|j)s',
+    '!**/shared/**/*.(t|j)s',
   ],
   moduleNameMapper: {
     '^@Src/(.*)': '<rootDir>/$1',

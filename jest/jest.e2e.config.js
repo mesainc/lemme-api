@@ -14,6 +14,7 @@ config.collectCoverageFrom = [
   '!src/**/*mock*.(t|j)s',
   '!src/**/*enum.(t|j)s',
   '!src/**/*.interface.(t|j)s',
+  '!src/**/shared/**/*.(t|j)s',
 ];
 config.rootDir = '..';
 config.testRegex = '.e2e-spec.ts$';
