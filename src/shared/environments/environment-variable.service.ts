@@ -1,6 +1,6 @@
-import { Injectable } from '@nestjs/common'
-import { ConfigService } from '@nestjs/config'
-import { TypeOrmModuleOptions } from '@nestjs/typeorm'
+import { Injectable } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
+import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 
 @Injectable()
 export class EnvironmentVariableService {
@@ -10,20 +10,20 @@ export class EnvironmentVariableService {
     return (
       this.configService.get<string>('NODE_ENV', { infer: true }) ===
       'production'
-    )
+    );
   }
 
   get isDevelopment(): boolean {
     return (
       this.configService.get<string>('NODE_ENV', { infer: true }) ===
       'development'
-    )
+    );
   }
 
   get isTest(): boolean {
     return (
       this.configService.get<string>('NODE_ENV', { infer: true }) === 'test'
-    )
+    );
   }
 
   get databaseConfig(): TypeOrmModuleOptions {
@@ -42,6 +42,6 @@ export class EnvironmentVariableService {
       migrations: [
         __dirname + '/../../shared/database/typeorm/migrations/*{.ts,.js}',
       ],
-    }
+    };
   }
 }
